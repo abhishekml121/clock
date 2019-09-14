@@ -1,0 +1,112 @@
+/* Layout */
+.main {
+    display: block;
+    padding: 2em;
+    height: 90vh;
+    justify-content: center;
+    align-items: middle;
+
+}
+.info{
+    position: fixed;left: 0;
+    top: 30%;
+    padding: 20px;
+    max-width: 270px;
+    background-color: darkgray;
+    box-shadow: 0 4px 8px 0 gray;
+
+}
+.info p{
+    margin:0;padding: 0;
+    line-height: 2;
+    font-size: 17px;
+    text-shadow: 0px 0px 1px;
+    
+}
+.info p span{
+    font-size: 25px;background-color: lightgray;
+    padding: 5px;
+}
+
+.clockbox,
+#clock {
+    width: 65%;
+    display: block;
+    margin: 0 auto;
+    margin-top: -80px;
+}
+
+/* Clock styles */
+.circle {
+    fill: none;
+    stroke: #000;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+    transition: all 0.4s
+}
+
+.mid-circle {
+    fill: #000;
+}
+.hour-marks {
+    fill: none;
+    stroke: #000;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+    transition: all 1.2s;
+}
+
+.hour-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 17;
+    stroke-miterlimit: 10;
+}
+
+.minute-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+}
+
+.second-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+/* Transparent box ensuring arms center properly. */
+.sizing-box {
+    fill: none;
+}
+
+/* Make all arms rotate around the same center point. */
+/* Optional: Use transition for animation. */
+#hour,
+#minute,
+#second {
+    transform-origin: 300px 300px;
+    transition: transform .5s ease-in-out;
+}
+
+#analog{
+    background: linear-gradient(to right, lightgreen , yellow);
+    border:5px solid #555;
+    padding: 10px;
+    margin-bottom: 10px;max-width: 600px;
+    margin: 10px auto;
+    margin-top: -30px;
+    transition: background .5s ease-in-out;
+    position: sticky;
+    bottom: 0;
+}
+
+#analog p{
+    font-size: 38px;text-align: center;margin:0;
+    color: #555;
+    transition: background .5s ease-in-out;
+
+}
+
